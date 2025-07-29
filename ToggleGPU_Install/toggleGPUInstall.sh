@@ -6,15 +6,15 @@ echo "Running ToggleGPU install script..."
 #make ToggleGPU directory in home
 INSTALL_DIR="$HOME/ToggleGPU"
 mkdir -p "$INSTALL_DIR"
-echo "1"
+
 #copy ToggleGPU config script, icon, and ToggleGPU shell script from ToggleGPU_vX.X.X data directory to ToggleGPU directory
 cd data
 cp toggleGPUConf.sh ToggleGPU.sh icon.png "$INSTALL_DIR"
-echo "2"
+
 #create ToggleGPU desktop file for toggleGPU.sh and add to applications
 DESKTOP_FILE="$HOME/.local/share/applications/ToggleGPU.desktop"
 mkdir -p "$(dirname "$DESKTOP_FILE")"
-echo "3"
+
 cat > "$DESKTOP_FILE" <<EOF
 [Desktop Entry]
 Name=ToggleGPU
@@ -27,9 +27,9 @@ Categories=System;Utility;
 EOF
 
 chmod +x "$INSTALL_DIR/ToggleGPU.sh"
-echo "4"
+
 #run config script from ToggleGPU directory to ask user for GPU to toggle and create config file.
 echo "Data installed, running config script..."
 bash "$INSTALL_DIR/toggleGPUConf.sh"
-echo "5"
+
 echo "Installation complete"

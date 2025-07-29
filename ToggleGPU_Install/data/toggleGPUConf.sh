@@ -18,8 +18,8 @@ done
 
 #handle input for user request for the GPU to toggle
 while true; do
-    read -p "Enter the number of the discrete GPU to toggle, if no discrete cards appear, quit.\n
-    DO NOT select integrated graphics or your display might break. (q to quit): " choice
+    read -p "Enter the number of the discrete GPU to toggle, if no discrete cards appear, quit
+DO NOT select integrated graphics or your display might break. (q to quit): " choice
 
     if [[ "$choice" == "q" ]]; then
         echo "Quitting setup."
