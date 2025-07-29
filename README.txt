@@ -1,0 +1,5 @@
+Introducing RSA ToggleGPU, a shell script that can be used to turn off discrete GPUs in laptops running Linux to prevent them from draining battery and causing heating. This is primarily intended for laptops that have the same dGPU and iGPU vendor, such as the Framework 16 or my own Asus Flip 15, but it could probably be used on AMD and Nvidia or Intel and Nvidia systems.
+
+Important: Does not work on GNOME yet, and is entirely untested on anything except a laptop running an Intel 12700H and Arc A370m with Arch and KDE Plasma. It is not guaranteed to work on any system except for my own, though similar configs to mine should work. Use at your own risk, though any problems should be fixable by a hard reboot to rescan PCI devices.
+
+Do not use on iGPUs unless you know that your display configuration can work without it enabled. Many laptops require the iGPU to display the signal and the dGPU isn't wired to the monitor. Removing the iGPU could cause the system to freeze or crash, requiring a hard reboot.
