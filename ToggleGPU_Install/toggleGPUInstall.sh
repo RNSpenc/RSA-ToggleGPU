@@ -19,7 +19,7 @@ cat > "$DESKTOP_FILE" <<EOF
 [Desktop Entry]
 Name=ToggleGPU
 Comment=Enable or disable a secondary GPU
-Exec=sudo $INSTALL_DIR/ToggleGPU.sh
+Exec=$INSTALL_DIR/ToggleGPU.sh
 Icon=$INSTALL_DIR/icon.png
 Terminal=true
 Type=Application
@@ -27,6 +27,7 @@ Categories=System;Utility;
 EOF
 
 chmod +x "$INSTALL_DIR/ToggleGPU.sh"
+chmod +x "$DESKTOP_FILE"
 
 #run config script from ToggleGPU directory to ask user for GPU to toggle and create config file.
 echo "Data installed, running config script..."
